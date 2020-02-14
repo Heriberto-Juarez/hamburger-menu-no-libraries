@@ -1,0 +1,140 @@
+html {
+    margin: 0;
+    padding: 0;
+}
+
+* {
+    box-sizing: content-box;
+    font-family: Helvetica, Arial, sans-serif; /**Solo puse esta tipografía para no ver la que esta por defecto**/
+}
+
+/**
+Los estilos de arriba los puedes quitar, son cosas que deberían venir en el normalize.css que tienes
+**/
+
+.h-navigation {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    background: blueviolet; /**Aquí puedes poner transparent para que la barra no tenga color de fondo**/
+    width: 100%;
+    white-space: nowrap;
+}
+
+.h-navigation ul {
+    margin: 0;
+    padding: 0;
+}
+
+.h-navigation ul li{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    color: #ffffff;
+}
+
+.h-navigation li a {
+    text-decoration: none;
+    color: #ffffff;
+    padding: 0.5rem 1rem;
+    vertical-align: middle;
+}
+
+.h-navigation .left {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    white-space: nowrap;
+}
+
+.h-navigation .left li:first-of-type a{
+    float: left;
+}
+.h-navigation .left li:last-child a {
+    float: right;
+}
+
+.h-navigation .left li {
+    width: 50%;
+    display: inline-block;
+}
+
+.h-navigation .left li:last-child img{
+    margin-left: auto;
+}
+
+.h-navigation .right {
+    /*
+    display: none;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 1s ease-out;
+    */
+    transition: opacity 1.5s ease-out;
+    opacity: 0;
+    height: 0;
+    overflow: hidden;
+    width: 100%;
+}
+.h-navigation .right li{
+    width: 100%;
+}
+
+.h-navigation .right li a {
+    display: block;
+}
+.h-navigation .right li a:hover {
+    background-color: #262527;
+    color: #eeeeee;
+}
+
+.h-navigation .right.visible {
+    opacity: 1;
+    height: auto;
+}
+
+
+@media (min-width: 576px) {
+
+}
+
+@media (min-width: 768px) {
+
+}
+
+@media (min-width: 992px) {
+    /**
+    Cuando se tenga una pantalla con 992px o más. El menú se expande
+    */
+
+    .h-navigation ul.left, .h-navigation ul.right{
+        width: 50%;
+        display: inline-block;
+    }
+    .h-navigation ul.right {
+        opacity: 1;
+        height: auto;
+    }
+    .h-navigation ul.right li{
+        display: inline-block;
+        width: auto;
+    }
+    .h-navigation .left li {
+        width: auto;
+    }
+    .h-navigation .left li a{
+        float: none !important;
+    }
+    .h-navigation .left li:last-of-type{
+        display: none;
+    }
+    .h-navigation .right {
+        width: auto !important;
+        float: right;
+    }
+}
+
+@media (min-width: 1200px) {
+
+}
