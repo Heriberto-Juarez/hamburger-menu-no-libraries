@@ -13,13 +13,21 @@ Los estilos de arriba los puedes quitar, son cosas que deberían venir en el nor
 **/
 
 .h-navigation {
-    position: fixed;
+    position: fixed; /*La barra de navegación esta fija*/
     left: 0;
     top: 0;
     right: 0;
     background: blueviolet; /**Aquí puedes poner transparent para que la barra no tenga color de fondo**/
     width: 100%;
     white-space: nowrap;
+}
+
+body {
+    margin-top: 56px;
+}
+
+.h-navigation img {
+    max-height: 32px;
 }
 
 .h-navigation ul {
@@ -38,7 +46,6 @@ Los estilos de arriba los puedes quitar, son cosas que deberían venir en el nor
     text-decoration: none;
     color: #ffffff;
     padding: 0.5rem 1rem;
-    vertical-align: middle;
 }
 
 .h-navigation .left {
@@ -107,7 +114,9 @@ Los estilos de arriba los puedes quitar, son cosas que deberían venir en el nor
     /**
     Cuando se tenga una pantalla con 992px o más. El menú se expande
     */
-
+    body {
+        margin-top: 36px;
+    }
     .h-navigation ul.left, .h-navigation ul.right{
         width: 50%;
         display: inline-block;
@@ -122,6 +131,7 @@ Los estilos de arriba los puedes quitar, son cosas que deberían venir en el nor
     }
     .h-navigation .left li {
         width: auto;
+        display: block;
     }
     .h-navigation .left li a{
         float: none !important;
